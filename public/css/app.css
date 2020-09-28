@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
@@ -77,6 +77,37 @@ body {
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
+}
+
+.bgi{
+  background-image:
+      url('../Instaclone/iphonecover2.png');
+      background-repeat: no-repeat;
+      width: 320px;
+      height: 560px;
+}
+
+.carousel-inner{
+  position: relative;
+  overflow: hidden;
+  padding:0px;
+  margin-top: 62px;
+  margin-left: 88px;
+  margin-right: 10px;
+}
+.form-group input{
+  background-color: rgba(241, 240, 240, 0.459);
+}
+
+.bottom-text {
+  font-size: 0.75rem;
+  font-weight:600;
+  
+}
+
+.bottom-text .nav-link{
+  color:#00376b;
+  margin-left: -20px;
 }
 
 hr {
@@ -6677,7 +6708,7 @@ a.close.disabled {
 
 .carousel-inner {
   position: relative;
-  width: 100%;
+ 
   overflow: hidden;
 }
 
