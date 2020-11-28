@@ -23,7 +23,9 @@ class PostsController extends Controller
 
     public function index()
     {
-        $posts = Post::orderBy('created_at','desc')->get();
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(10);
+       // $posts = Post::->get();
         return view("home")->with("posts",$posts);
         //
     }

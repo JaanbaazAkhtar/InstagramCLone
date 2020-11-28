@@ -13,16 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::post('/follow/{user}', 'FollowsController@store');
 
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'PostsController@index')->name('home');
+Route::get('/', 'PostsController@index')->name('home');
 Route::get('/p/create', 'PostsController@create')->name('post.create');
 Route::post('/p','PostsController@store')->name('post.store');
 Route::get('/p/{post}', 'PostsController@show')->name('post.show');
